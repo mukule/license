@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="{% static 'main/images/icon.ico' %}">
+  <title>Capital Markets authority</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'main/css/style.css' %}">
+  <style>
+  .pagination-container {
+    display: flex;
+    justify-content: center !important;
+    margin-top: 10px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.pagination-link:hover {
+    background-color: #ddd;
+}
+
+.current-page {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #c7af55;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+table {
+        border-collapse: separate;
+        border-spacing: 0;
+        width: 100%;
+    }
+    
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+    
+    th {
+        background-color: #333;
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+  
+  
+    {% include 'main/includes/navbar.html' %}
+    {% include '../main/includes/messaging.html' %}
+    {% block content %}
+    {% endblock %}
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
