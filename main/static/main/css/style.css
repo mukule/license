@@ -115,7 +115,7 @@
   border-color: var(--primary-color);
 }
 .banner {
-  background: url("/static/main/images/kenya.jpg");
+  background: url("/static/main/images/kenya.png");
   background-size: cover;
   background-position: center;
   color: white;
