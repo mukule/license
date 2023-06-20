@@ -5,8 +5,16 @@ from django.db.models import Q
 
 # Create your views here.
 def license_category_list(request):
+    query = request.GET.get('q')
+    
     categories = LicenseCategory.objects.all()
-    context = {'categories': categories}
+    
+    if query:
+        categories = categories.filter(
+            Q(name__icontains=query)
+        )
+    
+    context = {'categories': categories, 'query': query}
     return render(request, 'main/license_category_list.html', context)
 
 
