@@ -34,7 +34,7 @@
                 {% if licenses %}
                     {% for license in licenses %}
                         <tr>
-                            <td>{{ license.name }}</td>
+                            <td>{{ license.name|safe }}</td>
                             <td>{{ license.address }}</td>
                             <td>{{ license.license_number }}</td>
                             <td><a href="{{ license.weblink }}">{{ license.weblink }}</a></td>
